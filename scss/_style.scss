@@ -32,9 +32,23 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: textclip 4s linear infinite;
+        @media (max-width: $Bp-footer-l) {
+            font-size: 8rem;
+            margin-top: $Whitespace-l;
+        }
+        @media (max-width: $Bp-logo-s) {
+            font-size: 7rem;
+            margin-top: $Whitespace-m;
+        }
         &::after {
             content: "ambient";
-            margin-left: -44.25rem;
+            margin-left: -43.2rem;
+            @media (max-width: $Bp-footer-l) {
+                margin-left: -34.55rem;
+            }
+            @media (max-width: $Bp-logo-s) {
+                margin-left: -30.25rem;
+            }
         }
     }
 }
@@ -44,15 +58,35 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     padding: $Whitespace-l;
+    text-align: center;
+    @media (max-width: $Bp-footer-l) {
+        grid-template-columns: 1fr;
+    }
+    @media (max-width: $Bp-footer-m) {
+        padding: $Whitespace-m;
+    }
     &__description {
         border-right: 1px solid $Color-secondary;
         padding-right: $Whitespace-l;
+        @media (max-width: $Bp-footer-l) {
+            border-right: none;
+            border-bottom: 1px solid $Color-secondary;
+            padding: 0 0 $Whitespace-l 0;
+        }
+        @media (max-width: $Bp-footer-m) {
+            padding-bottom: $Whitespace-m;
+        }
     }
     &__credits {
         padding-left: $Whitespace-l;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        @media (max-width: $Bp-footer-l) {
+            padding: $Whitespace-l 0 0 0;
+        }
+        @media (max-width: $Bp-footer-m) {
+            padding-top: $Whitespace-m;
+        }
         .links {
             display: flex;
             flex-wrap: wrap;
@@ -86,6 +120,10 @@
     gap: $Whitespace-l;
     align-items: center;
     justify-content: center;
+    @media (max-width: $Bp-footer-l) {
+        gap: $Whitespace-m;
+        width: 100%;
+    }
 
     .play-box {
         display: flex;

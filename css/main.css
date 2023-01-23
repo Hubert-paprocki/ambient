@@ -32,9 +32,31 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
 }
+@media (max-width: 40.625em) {
+  .background-box .logo {
+    font-size: 8rem;
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .background-box .logo {
+    font-size: 7rem;
+    margin-top: 3rem;
+  }
+}
 .background-box .logo::after {
   content: "ambient";
-  margin-left: -44.25rem;
+  margin-left: -43.2rem;
+}
+@media (max-width: 40.625em) {
+  .background-box .logo::after {
+    margin-left: -34.55rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .background-box .logo::after {
+    margin-left: -30.25rem;
+  }
 }
 
 .footer {
@@ -42,16 +64,48 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding: 5rem;
+  text-align: center;
+}
+@media (max-width: 40.625em) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 27.25em) {
+  .footer {
+    padding: 3rem;
+  }
 }
 .footer__description {
   border-right: 1px solid rgb(210, 210, 210);
   padding-right: 5rem;
 }
+@media (max-width: 40.625em) {
+  .footer__description {
+    border-right: none;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    padding: 0 0 5rem 0;
+  }
+}
+@media (max-width: 27.25em) {
+  .footer__description {
+    padding-bottom: 3rem;
+  }
+}
 .footer__credits {
   padding-left: 5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+@media (max-width: 40.625em) {
+  .footer__credits {
+    padding: 5rem 0 0 0;
+  }
+}
+@media (max-width: 27.25em) {
+  .footer__credits {
+    padding-top: 3rem;
+  }
 }
 .footer__credits .links {
   display: flex;
@@ -85,6 +139,12 @@
   gap: 5rem;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 40.625em) {
+  .sound-menu {
+    gap: 3rem;
+    width: 100%;
+  }
 }
 .sound-menu .play-box {
   display: flex;
@@ -149,6 +209,11 @@ body {
 .expand_more:hover {
   transform: scale(1.1);
 }
+@media (max-width: 40.625em) {
+  .expand_more {
+    font-size: 8rem !important;
+  }
+}
 
 .play-box__btn--ico {
   display: block !important;
@@ -158,6 +223,11 @@ body {
 .play-box__btn--ico:hover {
   color: #9889c7;
   cursor: pointer;
+}
+@media (max-width: 40.625em) {
+  .play-box__btn--ico {
+    font-size: 8rem !important;
+  }
 }
 
 .icon {

@@ -19,6 +19,9 @@
     &:hover {
         transform: scale(1.1);
     }
+    @media (max-width: $Bp-footer-l) {
+        font-size: 8rem !important;
+    }
 }
 .play-box__btn--ico {
     display: block !important;
@@ -27,6 +30,9 @@
     &:hover {
         color: lighten($Color-additional, 30%);
         cursor: pointer;
+    }
+    @media (max-width: $Bp-footer-l) {
+        font-size: 8rem !important;
     }
 }
 .icon {
