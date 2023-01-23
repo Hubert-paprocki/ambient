@@ -1,13 +1,5 @@
 @import "config";
 
-.sound {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    background-color: #e14a7c;
-    cursor: pointer;
-}
-
 .background-box {
     width: 100%;
     height: 100vh;
@@ -16,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(transparent 40%, $Color-primary 110%);
+    background-image: linear-gradient(transparent 25%, $Color-primary 110%);
     justify-content: space-between;
 
     &__img {
@@ -31,8 +23,15 @@
         font-weight: 100;
         margin-top: 10rem;
         color: $Color-primary;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
         border-bottom: 1px $Color-primary dashed;
         height: fit-content;
+        background-image: linear-gradient(to right, $Color-primary 0%, $Color-additional 50%, $Color-primary 100%);
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 4s linear infinite;
         &::after {
             content: "ambient";
             margin-left: -44.25rem;
@@ -56,10 +55,18 @@
         align-items: center;
         .links {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a {
+                width: 5rem;
+                height: 5rem;
+                color: wheat;
+                text-decoration: none;
+            }
         }
     }
     .name {
-        background-image: linear-gradient(to right, #e14a7c 0%, #8758e4 50%, #e14a7c 100%);
+        background-image: linear-gradient(to right, #e14a7c 0%, lighten($Color-additional, 20%) 50%, #e14a7c 100%);
         background-size: 200% auto;
         background-clip: text;
         -webkit-background-clip: text;
@@ -70,5 +77,23 @@
 @keyframes textclip {
     to {
         background-position: 200% center;
+    }
+}
+.sound-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50rem;
+    gap: $Whitespace-l;
+    align-items: center;
+    justify-content: center;
+
+    .play-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__btn {
+            background-color: transparent;
+            border: none;
+        }
     }
 }

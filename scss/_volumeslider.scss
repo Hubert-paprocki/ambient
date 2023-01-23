@@ -1,0 +1,39 @@
+@import "config";
+.play-box:hover .volume-slider {
+    opacity: 1;
+}
+.volume-slider {
+    margin-top: 1.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    opacity: 0;
+    background-color: rgba($Color-secondary, 0.45);
+    border-radius: 5px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s;
+    background-color: rgba($Color-additional, 0.95);
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background-color: darken($Color-additional, 10%);
+    transform: scale(1.2);
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}

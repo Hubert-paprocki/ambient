@@ -17,13 +17,75 @@
     <header class="background-box">
         <img src="./img/background-1.png" alt="Cozy background image" class="background-box__img">
         <h1 class="logo">Ambient</h1>
-
-
-        <span class="material-symbols-outlined expand_more ">
-            expand_more
-        </span>
+        <section class="sound-menu">
+            <div class="play-box">
+                <button class="play-box__btn" value="rain" onclick="playPause(this)">
+                    <span class="material-symbols-outlined play-box__btn--ico">
+                        rainy
+                    </span>
+                    <audio loop class="audio" id="rain">
+                        <source src='./sounds/rain.ogg' type='audio/ogg' />
+                    </audio>
+                </button>
+                <input type="range" class="volume-slider" id="volume-rain" max="100" value="50">
+            </div>
+            <div class="play-box"><button class="play-box__btn" value="thunderstorm" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        thunderstorm
+                    </span> <audio loop class="audio" id="thunderstorm">
+                        <source src='./sounds/storm.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-thunderstorm" max="100"
+                    value="50"></div>
+            <div class="play-box"><button class="play-box__btn" value="tsunami" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        tsunami
+                    </span> <audio loop class="audio" id="tsunami">
+                        <source src='./sounds/waves.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-tsunami" max="100"
+                    value="50"></div>
+            <div class="play-box"><button class="play-box__btn" value="coffee" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        coffee
+                    </span> <audio loop class="audio" id="coffee">
+                        <source src='./sounds/coffee-shop.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-coffee" max="100" value="50">
+            </div>
+            <div class="play-box"><button class="play-box__btn" value="sailing" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        sailing
+                    </span> <audio loop class="audio" id="sailing">
+                        <source src='./sounds/boat.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-sailing" max="100"
+                    value="50"></div>
+            <div class="play-box"><button class="play-box__btn" value="apartment" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        apartment
+                    </span> <audio loop class="audio" id="apartment">
+                        <source src='./sounds/city.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-apartment" max="100"
+                    value="50"></div>
+            <div class="play-box"><button class="play-box__btn" value="nights_stay" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico">
+                        nights_stay
+                    </span> <audio loop class="audio" id="nights_stay">
+                        <source src='./sounds/summer-night.ogg' type='audio/ogg' />
+                    </audio> <input type="range" class="volume-slider" id="volume-nights_stay" max="100"
+                        value="50"></button></div>
+            <div class="play-box"><button class="play-box__btn" value="air" onclick="playPause(this)"><span
+                        class="material-symbols-outlined play-box__btn--ico ">
+                        air
+                    </span> <audio loop class="audio" id="air">
+                        <source src='./sounds/wind.ogg' type='audio/ogg' />
+                    </audio></button> <input type="range" class="volume-slider" id="volume-air" max="100" value="50">
+            </div>
+        </section>
+        <a href="#footer">
+            <span class="material-symbols-outlined expand_more ">
+                expand_more
+            </span>
+        </a>
     </header>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__description">
             <p>Ambient is a website designed to help people focus while they study or work. The site features a
                 variety of ambient sounds that users can listen to in the background while they complete their tasks.
@@ -32,17 +94,42 @@
         </div>
         <div class="footer__credits">
             <div class="links">
-                <div class="links__facebook">fb</div>
-                <div class="links__linkedin">lknd</div>
-                <div class="links__github">fb</div>
-                <div class="links__email">lknd</div>
+                <div class="links__facebook">
+                    <svg class="icon icon-facebook">
+                        <a href="https://www.facebook.com/hbrt.pa/">
+                            <use xlink:href="./sprite.svg#icon-facebook" target="_blank"></use>
+                        </a>
+                    </svg>
+                </div>
+
+                <div class="links__linkedin">
+                    <svg class="icon icon-linkedin">
+                        <a href="https://www.linkedin.com/in/hubert-paprocki-25b618236/">
+                            <use xlink:href="./sprite.svg#icon-linkedin" target="_blank"></use>
+                        </a>
+                    </svg>
+                </div>
+                <div class="links__github">
+                    <svg class="icon icon-github">
+                        <a href="https://github.com/X-Tripen">
+                            <use xlink:href="./sprite.svg#icon-github" target="_blank"></use>
+                        </a>
+                    </svg>
+                </div>
+                <div class="links__email">
+                    <svg class="icon icon-gmail">
+                        <a href="mailto: bnhp@op.pl" target="_blank">
+                            <use xlink:href="./sprite.svg#icon-gmail"></use>
+                        </a>
+                    </svg>
+                </div>
             </div>
             <p class="footer__creator">Copyright © 2023 <span class="name">Hubert Paprocki</span> All rights reserved.
                 </span>
             </p>
         </div>
     </footer>
-    <script src="./javascript/audioplayer.js"></script>
+    <script src="./javascript/player.js"></script>
 </body>
 
 </html>
