@@ -36,18 +36,33 @@
             font-size: 8rem;
             margin-top: $Whitespace-l;
         }
+        @media (max-height: $bp-height-m) {
+            font-size: 8rem;
+            margin-top: $Whitespace-l;
+        }
         @media (max-width: $Bp-footer-m) {
             font-size: 7rem;
             margin-top: $Whitespace-m;
         }
+        @media (max-width: $Bp-header-xs) {
+            font-size: 6rem;
+            margin-top: $Whitespace-s;
+        }
+
         &::after {
             content: "ambient";
             margin-left: -43.2rem;
             @media (max-width: $Bp-footer-l) {
                 margin-left: -34.55rem;
             }
+            @media (max-height: $bp-height-m) {
+                margin-left: -34.55rem;
+            }
             @media (max-width: $Bp-footer-m) {
                 margin-left: -30.25rem;
+            }
+            @media (max-width: $Bp-header-xs) {
+                margin-left: -25.9rem;
             }
         }
     }
@@ -137,6 +152,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100px;
         &__btn {
             background-color: transparent;
             border: none;

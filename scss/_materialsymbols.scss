@@ -25,6 +25,9 @@
     @media (max-width: $Bp-footer-l) {
         font-size: 6rem !important;
     }
+    @media (max-height: $bp-height-m) {
+        font-size: 6rem !important;
+    }
 }
 .play-box__btn--ico {
     display: block !important;
@@ -38,6 +41,9 @@
         font-size: 8rem !important;
     }
     @media (max-width: $Bp-footer-l) {
+        font-size: 6rem !important;
+    }
+    @media (max-height: $bp-height-m) {
         font-size: 6rem !important;
     }
 }

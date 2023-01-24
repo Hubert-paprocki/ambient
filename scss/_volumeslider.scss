@@ -1,6 +1,7 @@
 @import "config";
 .play-box:hover .volume-slider {
     opacity: 1;
+    width: 100%;
 }
 .volume-slider {
     margin-top: 1.5rem;
@@ -12,6 +13,12 @@
     border-radius: 5px;
     border-radius: 5px;
     transition: all 0.2s;
+    @media (hover: none) {
+        opacity: 0.2;
+    }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .volume-slider::-webkit-slider-thumb {
